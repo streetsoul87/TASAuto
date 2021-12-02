@@ -15,7 +15,7 @@ node {
         git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl1
       }
 
-      git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl2
+      //git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl2
   }
   
   stage('Build') {
