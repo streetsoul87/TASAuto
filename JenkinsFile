@@ -1,7 +1,9 @@
+String branchName = "master"
+String gitCredentials = "yoseph.kim"
+String repoUrl = "ssh://swfarmhub.lge.com:29418/lg-cobalt-evergreen.git"
+
 node {
-  stages {
-    stage ('gie clone') {   
-      git branch: 'master', credentialsId: 'yoseph.kim', url: 'ssh://swfarmhub.lge.com:29418/lg-cobalt-evergreen.git'
-    }
+  stage('Clone') {
+    git branch: branchName, credentialsId: gitCredentials, url: repoUrl
   }
 }
