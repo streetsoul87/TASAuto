@@ -15,7 +15,11 @@ node {
   
   stage('Build') {
     steps {
+      echo '======'
+      sh 'pwd'
       dir('lg-cobalt-evergreen') {
+        echo '======'
+        sh 'pwd'
         sh './build.sh ../NIP_Tools/ lm21u gold'
     }
   }
