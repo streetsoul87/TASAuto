@@ -1,7 +1,7 @@
 pipeline {
   agent any
   
-  stage('clone') {
+  stages ('clone') {
     git 'ssh://swfarmhub.lge.com:29418/lg-cobalt-evergreen.git'
     git 'ssh://swfarmhub.lge.com:29418/NIP_Tools.git'
   }
