@@ -1,5 +1,5 @@
 node {
   stage('clone') {
-    git 'ssh://swfarmhub.lge.com:29418/lg-cobalt-evergreen.git'
+    git 'ssh://yoseph.kim@swfarmhub.lge.com:29418/lg-cobalt-evergreen.git'
   }
 }
