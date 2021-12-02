@@ -18,7 +18,7 @@ node {
     sh 'pwd'
     dir('lg-cobalt-evergreen') {
       echo '======'
-      sh 'ls'
+      sh 'ls -al'
     }
   }
   
