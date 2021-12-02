@@ -15,7 +15,10 @@ node {
         git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl1
       }
 
-      //git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl2
+      sh 'mkdir NIP_Tools'
+      dir('NIP_Tools') {
+        git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl2
+      }
   }
   
   stage('Build') {
