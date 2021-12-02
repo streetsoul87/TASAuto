@@ -1,6 +1,7 @@
 String branchName = "master"
 String gitCredentials = "jude84.kim"
-String repoUrl = "ssh://swfarmhub.lge.com:29418/lg-cobalt-evergreen.git"
+String repoUrl1 = "ssh://swfarmhub.lge.com:29418/lg-cobalt-evergreen.git"
+String repoUrl2 = "ssh://swfarmhub.lge.com:29418/NIP_Tools.git"
 
 node {
   // Start Stages
@@ -8,7 +9,8 @@ node {
       // Clones the repository from the current branch name
       echo 'Cloning files from (branch: "' + branchName + '" )'
       dir('build') {
-          git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl
+          git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl1
+          git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl2
       }     
   }       
 }
