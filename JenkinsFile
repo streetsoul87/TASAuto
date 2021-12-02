@@ -1,21 +1,7 @@
 node {
   stages {
-    stage ('gie clone') {
-      steps {
-        git branch: 'master',
-        credentialsId: 'denpal',
-        url: 'yoseph.kim@swfarmhub.lge.com:29418/lg-cobalt-evergreen'
-      }
-    }
-    stage ('Test Git') {
-      steps {
-        withCredentials([sshUserPrivateKey(credentialsId: 'denpal', keyFileVariable: 'SSH_KEY')]) {
-          sh '''
-          git commit --allow-empty -m "test withCredentials"
-          git push origin feature/Jenkinsfile
-          '''
-        }
-      }
+    stage ('gie clone') {   
+      git branch: 'master', credentialsId: 'yoseph.kim', url: 'ssh://swfarmhub.lge.com:29418/lg-cobalt-evergreen.git'
     }
   }
 }
