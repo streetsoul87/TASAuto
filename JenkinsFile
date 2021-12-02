@@ -18,8 +18,6 @@ node {
     sh 'pwd'
     echo '======'
     sh 'ls -al'
-    dir('lg-cobalt-evergreen')
-      deleteDir()
     //dir('lg-cobalt-evergreen') {
     //  echo '======'
     //  sh 'ls -al'
