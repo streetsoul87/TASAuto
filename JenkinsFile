@@ -1,4 +1,4 @@
-String branchName = master
+String branchName = "master"
 String gitCredentials = "yoseph.kim"
 String repoUrl = "ssh://swfarmhub.lge.com:29418/lg-cobalt-evergreen.git"
 
