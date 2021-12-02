@@ -1,8 +1,5 @@
-pipeline {
-  agent any
-  
-  stages ('clone') {
-    echo 'Hello World'
-    git branch: 'main', credentialsId: 'cc3fef49-fba2-4867-a8a5-0d9f6694a6e0', url: 'https://github.com/streetsoul87/TASAuto.git'
+node {
+  stage('clone') {
+    git 'ssh://swfarmhub.lge.com:29418/lg-cobalt-evergreen.git'
   }
 }
