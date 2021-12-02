@@ -4,6 +4,7 @@ String repoUrl1 = "ssh://swfarmhub.lge.com:29418/lg-cobalt-evergreen.git"
 String repoUrl2 = "ssh://swfarmhub.lge.com:29418/NIP_Tools.git"
 
 node {
+  deleteDir()
   // Start Stages
   stage('Clone') {
       // Clones the repository from the current branch name
