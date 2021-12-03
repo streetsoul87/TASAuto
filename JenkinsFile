@@ -24,6 +24,7 @@ node {
   }
   */
   stage('Build') {
+    /*
     echo '======'
     sh 'pwd'
     echo '======'
@@ -31,6 +32,11 @@ node {
     dir('lg-cobalt-evergreen') {
       echo '======'
       sh 'ls -al'
+    }
+    */
+    
+    dir('lg-cobalt-evergreen') {
+      sh './build.sh /var/lib/jenkins/workspace/yoseph_pipeline2/NIP_Tools/ lm21u gold'
     }
   }
 }
