@@ -2,7 +2,6 @@ String branchName = "master"
 String gitCredentials = "jude84.kim"
 String repoUrl1 = "ssh://swfarmhub.lge.com:29418/lg-cobalt-evergreen.git"
 String repoUrl2 = "ssh://swfarmhub.lge.com:29418/NIP_Tools.git"
-String param = "../NIP_Tools/ lm21u gold"
 
 node {
   deleteDir()
@@ -20,8 +19,7 @@ node {
       sh 'mkdir lg-cobalt-evergreen'
       dir('lg-cobalt-evergreen') {
         git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl1
-        //sh './build.sh ../NIP_Tools/ lm21u gold'
-        sh "./build.sh ${param}"
+        sh './build.sh ../NIP_Tools/ lm21u gold'
       }
   }
   
