@@ -36,5 +36,6 @@ node {
     */
     def workspace = pwd()
     echo '${workspace}'
+    echo '${env.workspace}'
   }
 }
