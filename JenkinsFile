@@ -24,6 +24,7 @@ node {
   }
   */
   stage('Build') {
+  /*
     echo '======'
     sh 'pwd'
     echo '======'
@@ -33,5 +34,7 @@ node {
       sh 'ls -al'
     }
   }
-  
+  */
+  def workspace = pwd()
+  echo '${workspace}'
 }
