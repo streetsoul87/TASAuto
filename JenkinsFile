@@ -36,6 +36,8 @@ node {
     */
     
     dir('lg-cobalt-evergreen') {
+      sh 'pwd'
+      echo '====='
       sh './build.sh /var/lib/jenkins/workspace/yoseph_pipeline2/NIP_Tools/ lm21u gold'
     }
   }
