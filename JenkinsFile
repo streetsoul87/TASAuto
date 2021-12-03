@@ -3,6 +3,10 @@ String gitCredentials = "jude84.kim"
 String repoUrl1 = "ssh://swfarmhub.lge.com:29418/lg-cobalt-evergreen.git"
 String repoUrl2 = "ssh://swfarmhub.lge.com:29418/NIP_Tools.git"
 
+String param1 = "/var/lib/jenkins/workspace/yoseph_pipeline2/NIP_Tools/"
+String param2 = "lm21u"
+String param3 = "gold"
+
 node {
   //deleteDir()
   // Start Stages
@@ -38,7 +42,8 @@ node {
     dir('lg-cobalt-evergreen') {
       sh 'pwd'
       echo '====='
-      sh './build.sh /var/lib/jenkins/workspace/yoseph_pipeline2/NIP_Tools/ lm21u gold'
+      //sh './build.sh /var/lib/jenkins/workspace/yoseph_pipeline2/NIP_Tools/ lm21u gold'
+      sh './build.sh ${param1} ${param2} ${param3}'
     }
   }
 }
