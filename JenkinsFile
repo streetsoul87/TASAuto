@@ -5,8 +5,9 @@ String repoUrl2 = "ssh://swfarmhub.lge.com:29418/NIP_Tools.git"
 String repoUrl3 = "ssh://swfarmhub.lge.com:29418/NIP.git"
 
 node {
+/*
   deleteDir()
-
+  
   stage('Clone') {
       sh 'mkdir NIP_Tools'
       dir('NIP_Tools') {
@@ -26,7 +27,7 @@ node {
         git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl3
       }
   }
-
+*/
   stage('Build') {
     /* YouTube Build */ /*
     dir('lg-cobalt-evergreen') {
@@ -35,7 +36,7 @@ node {
     */
     
     /* Netflix Build */
-    dir('lg-cobalt-evergreen') {
+    dir('NIP') {
       sh './build.sh ../NIP_Tools lm21u'
     }
   }
