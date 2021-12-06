@@ -10,14 +10,13 @@ String param4 = "debug"
 String param5 = "nplb/loader_app"
 
 node {
-  // deleteDir()
+  deleteDir()
   // Start Stages
   
   stage('Clone') {
       // Clones the repository from the current branch name
       echo 'Cloning files from (branch: "' + branchName + '" )'
       
-      /*
       sh 'mkdir NIP_Tools'
       dir('NIP_Tools') {
         git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl2
@@ -26,25 +25,11 @@ node {
       sh 'mkdir lg-cobalt-evergreen'
       dir('lg-cobalt-evergreen') {
         git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl1
-        // sh './build.sh ../NIP_Tools/ lm21u gold'
-        // sh './build.sh ../NIP_Tools o20n webos4tv debug nplb/loader_app'
       }
-      */
   }
   
   stage('Build') {
-  /*
-    echo '======'
-    sh 'pwd'
-    echo '======'
-    sh 'ls -al'
     dir('lg-cobalt-evergreen') {
-      echo '======'
-      sh 'ls -al'
-    }
-   */ 
-    dir('lg-cobalt-evergreen') {
-      //sh './build.sh /var/lib/jenkins/workspace/yoseph_pipeline2/NIP_Tools/ lm21u gold'
       sh './build.sh ../NIP_Tools o20n webos4tv debug nplb/loader_app'
     }
   }
