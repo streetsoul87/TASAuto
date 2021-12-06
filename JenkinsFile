@@ -7,7 +7,7 @@ String repoUrl3 = "ssh://swfarmhub.lge.com:29418/NIP.git"
 node {
   deleteDir()
   // Start Stages
-  /*
+
   stage('Clone') {
       // Clones the repository from the current branch name
       echo 'Cloning files from (branch: "' + branchName + '" )'
@@ -30,7 +30,7 @@ node {
         git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl3
       }
   }
-  */
+
   stage('Build') {
     /* YouTube Build */ /*
     dir('lg-cobalt-evergreen') {
