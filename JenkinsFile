@@ -26,11 +26,12 @@ node {
       dir('lg-cobalt-evergreen') {
         git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl1
         // sh './build.sh ../NIP_Tools/ lm21u gold'
-        sh './build.sh ../NIP_Tools o20n webos4tv debug nplb/loader_app'
+        // sh './build.sh ../NIP_Tools o20n webos4tv debug nplb/loader_app'
       }
   }
-  /*
+  
   stage('Build') {
+  /*
     echo '======'
     sh 'pwd'
     echo '======'
@@ -39,11 +40,10 @@ node {
       echo '======'
       sh 'ls -al'
     }
-    
+   */ 
     dir('lg-cobalt-evergreen') {
       //sh './build.sh /var/lib/jenkins/workspace/yoseph_pipeline2/NIP_Tools/ lm21u gold'
-      sh './build.sh ${param1} ${param2} ${param3} ${param4} ${param5}'
+      sh './build.sh ../NIP_Tools o20n webos4tv debug nplb/loader_app'
     }
   }
-  */
 }
