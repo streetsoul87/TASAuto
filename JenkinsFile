@@ -10,9 +10,9 @@ String param4 = "debug"
 String param5 = "nplb/loader_app"
 
 node {
-  //deleteDir()
+  deleteDir()
   // Start Stages
-  /*
+  
   stage('Clone') {
       // Clones the repository from the current branch name
       echo 'Cloning files from (branch: "' + branchName + '" )'
@@ -28,7 +28,7 @@ node {
         sh './build.sh ../NIP_Tools/ lm21u gold'
       }
   }
-  */
+  
   stage('Build') {
     /*
     echo '======'
@@ -42,8 +42,6 @@ node {
     */
     
     dir('lg-cobalt-evergreen') {
-      sh 'pwd'
-      echo '====='
       //sh './build.sh /var/lib/jenkins/workspace/yoseph_pipeline2/NIP_Tools/ lm21u gold'
       sh './build.sh ${param1} ${param2} ${param3} ${param4} ${param5}'
     }
