@@ -21,6 +21,7 @@ node {
   stage('Build') {
     dir('lg-cobalt-evergreen') {
       sh './build.sh ../NIP_Tools o20n webos4tv debug nplb'
+      sh './build.sh youtube'
     }
   }
 }
