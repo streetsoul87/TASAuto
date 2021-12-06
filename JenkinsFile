@@ -10,7 +10,7 @@ String param4 = "debug"
 String param5 = "nplb/loader_app"
 
 node {
-  //deleteDir()
+  deleteDir()
   // Start Stages
   
   stage('Clone') {
