@@ -4,8 +4,10 @@ String repoUrl1 = "ssh://swfarmhub.lge.com:29418/lg-cobalt-evergreen.git"
 String repoUrl2 = "ssh://swfarmhub.lge.com:29418/NIP_Tools.git"
 
 String param1 = "/var/lib/jenkins/workspace/yoseph_pipeline2/NIP_Tools/"
-String param2 = "lm21u"
-String param3 = "gold"
+String param2 = "o20n"
+String param3 = "webos4tv"
+String param4 = "debug"
+String param5 = "nplb/loader_app"
 
 node {
   //deleteDir()
@@ -43,7 +45,7 @@ node {
       sh 'pwd'
       echo '====='
       //sh './build.sh /var/lib/jenkins/workspace/yoseph_pipeline2/NIP_Tools/ lm21u gold'
-      sh './build.sh ${param1} ${param2} ${param3}'
+      sh './build.sh ${param1} ${param2} ${param3} ${param4} ${param5}'
     }
   }
 }
