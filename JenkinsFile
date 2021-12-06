@@ -17,6 +17,7 @@ node {
       // Clones the repository from the current branch name
       echo 'Cloning files from (branch: "' + branchName + '" )'
       
+      /*
       sh 'mkdir NIP_Tools'
       dir('NIP_Tools') {
         git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl2
@@ -28,6 +29,7 @@ node {
         // sh './build.sh ../NIP_Tools/ lm21u gold'
         // sh './build.sh ../NIP_Tools o20n webos4tv debug nplb/loader_app'
       }
+      */
   }
   
   stage('Build') {
