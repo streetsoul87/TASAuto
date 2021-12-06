@@ -2,6 +2,7 @@ String branchName = "master"
 String gitCredentials = "jude84.kim"
 String repoUrl1 = "ssh://swfarmhub.lge.com:29418/lg-cobalt-evergreen.git"
 String repoUrl2 = "ssh://swfarmhub.lge.com:29418/NIP_Tools.git"
+String repoUrl3 = "ssh://swfarmhub.lge.com:29418/NIP.git"
 
 String param1 = "/var/lib/jenkins/workspace/yoseph_pipeline2/NIP_Tools/"
 String param2 = "o20n"
@@ -22,9 +23,17 @@ node {
         git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl2
       }
       
+      /* YouTue Build*/ /*
       sh 'mkdir lg-cobalt-evergreen'
       dir('lg-cobalt-evergreen') {
         git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl1
+      }
+      */
+      
+      /* Netflix Build*/
+      sh 'mkdir NIP'
+      dir('NIP') {
+        git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl3
       }
   }
   */
